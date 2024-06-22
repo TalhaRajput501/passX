@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Passwords</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: 5s;
+}
+
+img {
+
+    cursor: pointer;
+    position: relative;
+    width: 26px;
+    height: 14px;
+    bottom: 6px;
+
+}
+
+#alert {
+    display: none;
+}
+
+#navigation {
+    background-color: black;
+}
+
+/* Navigation Bar Section */
+.nav {
+    height: 55px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul li {
+    list-style: none;
+
+}
+
+.logo {
+    color: white;
+    font-size: 1.9rem;
+    margin: 0 32px;
+    cursor: pointer;
+}
+
+.nav ul li a {
+    margin: 0 5px;
+    color: white;
+    text-decoration: none;
+    padding: 2px 28px;
+    border-radius: 8px;
+}
+
+.nav ul li a:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+/* Navigation Bar End */
+.container {
+    width: 80%;
+    margin: 23px auto;
+    margin-bottom: 112px;
+}
+
+h1,
+h2,
+h3 {
+    margin: 18px 0;
+}
+
+/* Submit Button  */
+.btn {
+    padding: 5px 22px;
+    background-color: black;
+    color: white;
+    margin: 7px 0;
+    cursor: pointer;
+}
+
+.btnsm {
+    padding: 3px 18px;
+    background-color: black;
+    color: white;
+    margin: 2px 0;
+    cursor: pointer;
+}
+
+/* Table Ssection */
+table,
+td,
+tr {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px 16px;
+}
+
+/* Contact Section   Starts Here*/
+#contact {
+    height: 563px;
+    justify-content: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.contact-box {
+    margin-top: 39px;
+    padding: 22px 0;
+    justify-content: center;
+    display: flex;
+}
+
+.contact-h {
+    position: absolute;
+    padding: 10px 0;
+}
+
+.para {
+    font-size: 22px;
+    z-index: 1;
+    font-weight: bold;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+
+.para::after {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+    content: "";
+    left: 0;
+    top: -28px;
+    transform: rotate(10deg);
+    width: 50px;
+    height: 35px;
+    border-top-left-radius: 37px;
+    border-bottom-right-radius: 37px;
+
+}
+.footer-right  {
+    text-align: right;
+}
+.footer-r{
+    text-align: center;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+.footer-emoji{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.emoji {
+    color: black;
+    filter: invert(1);
+    font-size: 18px;
+    display: inline;
+    margin: 0 2px;
+}
+.emoji-tele {
+    color: black;
+    /* filter: invert(1); */
+    font-size: 18px;
+    display: inline;
+    margin: 0 2px;
+}
+</style>
+
+</head>
+
+<body>
+    <nav id="navigation">
+        <div class="nav">
+            <div class="logo">Pass-X</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Password Manager</h1>
+        <p>
+            🔒Your Security, Our Priority <br>
+            Hello There! <br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab illo hic porro dicta excepturi ducimus similique
+            ipsa amet id voluptatum, aspernatur animi distinctio molestias quidem ut reiciendis molestiae? Repellendus
+            veniam aliquid harum sapiente!
+        </p>
+        <h2>Your Passwords <span id="alert">(Copied!)</span></h2>
+        <table>
+
+            <tr>
+                <th>Website</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete</th>
+            </tr>
+
+        </table>
+        <h3>Add a Password 🔑</h3>
+        <form action="/submit" method="post">
+
+            <!-- website input -->
+            <label for="website">Website:</label>
+            <input type="text" id="website" name="website">
+            <br><br>
+            <!-- username input -->
+            <label for="username">User name:</label>
+            <input type="text" id="username" name="username">
+            <br><br>
+            <!--password input -->
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password">
+            <required></required>
+            <br><br>
+            <!--Submit Button -->
+            <button type="submit" class="btn">Save</button>
+        </form>
+
+
+    </div>
+    <hr>
+    <div id="contact">
+        <div class="contact-box">
+            <p class="para">Contact Us</p>
+            <h1 class="contact-h">Visit Our Office Today</h1>
+        </div>
+
+        <div class="footer">
+            <div class="footer-left">
+                <h1>Opening Hours</h1>
+
+                <div class="footer-emoji">
+                    <p class="emoji">⏱</p>
+                    <p> Monday to Friday - 9am to 7pm</p>
+                </div>
+                <div class="footer-emoji">
+                    <p class="emoji">⏱</p>
+                    <p>Saturday and Sunday (Holiday)</p>
+                </div>
+            </div>
+
+            <div class="footer-right">
+                <div class="footer-r">
+                        <h1>Get In Touch</h1>
+                        <div class="footer-emoji">
+                        <p>30 feet road, near higher secondary school Multan</p>
+                        <p class="emoji">💎</p>
+                        <p></p>
+                    </div>
+                    <div class="footer-emoji">
+                        <p>+92 3191748730</p>
+                        <p class="emoji-tele">📞</p>
+                        <p></p>
+                    </div>
+                    <div class="footer-emoji">
+                        <p>talhaashfaq4197@gmail.com</p>
+                        <p class="emoji-tele">📝</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="social-media">
+            <p>©</p>
+        </div>
+    </div>
+    <script>
+        //  Function to make password star
+function maskPassword(pass){
+    let str = ""
+    for (let index = 0; index < pass.length; index++){
+        str += "*"
+    }
+    return str
+}
+
+//  Function to make password star
+
+
+//  Function to copy the Text
+function copytext(txt) {
+    navigator.clipboard.writeText(txt).then(
+        () => {
+            document.getElementById("alert").style.display = "inline"
+            setTimeout(() => {
+                document.getElementById("alert").style.display = "none"
+            }, 2000);
+        },
+        () => {
+            alert("Failed to Copying text");
+        },
+        )
+    }
+    
+    
+    //  Function to Delete the Text
+const deletePassword = (website) =>{
+    let data = localStorage.getItem("passwords");
+    let arr = JSON.parse(data);
+    arrUpdated = arr.filter((e)=>{
+        return e.website != website
+    })
+    localStorage.setItem("passwords", JSON.stringify(arrUpdated));
+    alert(`Successfully delete ${website}'s password`)
+    showPasswords()
+}
+
+
+// Logic to fill the table
+const showPasswords = () => {
+    let tb = document.querySelector("table");
+    let data = localStorage.getItem("passwords");
+    if (data == null || JSON.parse(data).length == 0) {
+    tb.innerHTML = "No Data To Show"
+    } 
+    else {
+        tb.innerHTML = `
+        <tr>
+        <th>Website</th>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Delete</th>
+        </tr>`
+        let arr = JSON.parse(data);
+        let str = "";
+        for (let index = 0; index < arr.length; index++) {
+        const element = arr[index];
+
+        str += `<tr>
+        <td>${element.website} <img  onclick="copytext('${element.website}')" src="copy.svg" alt="Copy Button" width="10" height="10"> </td>
+        <td>${element.username} <img  onclick="copytext('${element.username}')" src="copy.svg" alt="Copy Button" width="10" height="10"> </td>
+        <td>${maskPassword(element.password)} <img  onclick="copytext('${element.password}')" src="copy.svg" alt="Copy Button" width="10" height="10"> </td>
+        <td><button class="btnsm" onclick = "deletePassword('${element.website}')">Delete</button></td>
+        </tr>`
+    }
+    tb.innerHTML = tb.innerHTML + str
+}
+        // To reset form after filling
+        website.value = ""
+        username.value = ""
+        password.value = ""
+}
+
+    console.log("Working");
+    showPasswords()
+    document.querySelector(".btn").addEventListener("click", (e) => {
+    e.preventDefault()
+    console.log("Clicked......")
+    console.log(username.value, password.value);
+    let passwords = localStorage.getItem("passwords");
+    console.log(passwords);
+    if (passwords == null) {
+        let json = []
+        json.push({ website: website.value,username: username.value, password: password.value });
+        alert("Password Saved");
+        localStorage.setItem("passwords", JSON.stringify(json));
+    } else {
+        let json = JSON.parse(localStorage.getItem("passwords"));
+        json.push({ website: website.value,username: username.value, password: password.value });
+        alert("Password Saved");
+        localStorage.setItem("passwords", JSON.stringify(json));
+    }
+    showPasswords()
+})
+    </script>
+</body>
+
+</html>
